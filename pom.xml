@@ -16,6 +16,10 @@
 
     <properties>
         <java.version>1.8</java.version>
+
+        <!--这个db_env是自定义的，随便起-->
+        <db_env>dev</db_env>
+
     </properties>
 
     <dependencies>
@@ -117,6 +121,24 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <!--环境名-->
+            <id>dev</id>
+            <properties>
+                <!--这个名要和之前定义的db_dev.properties中的dev相同，下边会看到拼接-->
+                <db_env>dev</db_env>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <db_env>test</db_env>
+            </properties>
+        </profile>
+    </profiles>
+
+
     <build>
         <plugins>
             <plugin>
@@ -124,6 +146,18 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+
+        <filters>
+            <filter>src/main/resources/application-${db_env}.yml</filter>
+        </filters>
+
+        <resources>
+            <resource>
+                <!--这是拦截这个目录下的配置文件，进行处理-->
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
 </project>

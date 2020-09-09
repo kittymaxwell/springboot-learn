@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: @db_env@
   redis:
     host: localhost
     port: 6379
@@ -25,7 +27,7 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://localhost:3306/my_test?useUnicode=true&autoReconnect=true&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+    #url: jdbc:mysql://localhost:3306/my_test?useUnicode=true&autoReconnect=true&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     # 使用alibaba的druid连接池、监控
