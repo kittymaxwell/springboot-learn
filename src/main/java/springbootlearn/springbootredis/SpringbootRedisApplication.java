@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @MapperScan("springbootlearn.springbootredis.dao")
 @EnableCaching
-@EnableScheduling
+//@EnableScheduling
 public class SpringbootRedisApplication {
 
     public static void main(String[] args) {

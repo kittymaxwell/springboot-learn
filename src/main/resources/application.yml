@@ -2,7 +2,7 @@ spring:
   profiles:
     active: @db_env@
   redis:
-    host: localhost
+    host: 192.168.124.6
     port: 6379
     password:
     database: 0
@@ -17,7 +17,7 @@ spring:
     type: redis
 
   rabbitmq:
-    host: localhost
+    host: 192.168.124.6
     username: guest
     password: guest
     port: 5672
