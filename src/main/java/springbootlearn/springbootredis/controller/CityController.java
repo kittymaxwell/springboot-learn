@@ -46,6 +46,7 @@ public class CityController {
 	@ApiOperation(value="查询全部")
 	public List<CityVo>  listCities() {
 		List<CityVo> list = this.cityService.listCities();
+		logger.info("输出查询结果：{}",list);
 		return list;
 	}
 

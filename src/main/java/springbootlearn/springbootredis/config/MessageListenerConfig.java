@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springbootlearn.springbootredis.ack.MyAckReceiver;
 
-@Configuration
+//@Configuration
 public class MessageListenerConfig {
 
     @Autowired

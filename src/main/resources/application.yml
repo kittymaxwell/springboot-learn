@@ -93,3 +93,4 @@ logging:
       example:
         mapper: debug
 
+  config: classpath:logback-${spring.profiles.active}.xml

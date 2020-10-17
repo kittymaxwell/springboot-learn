@@ -20,9 +20,9 @@ public class RabbitConfig {
         rabbitTemplate.setMandatory(true);
 
         rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
-            System.out.println("ConfirmCallback:     "+"相关数据："+correlationData);
+            /*System.out.println("ConfirmCallback:     "+"相关数据："+correlationData);
             System.out.println("ConfirmCallback:     "+"确认情况："+ack);
-            System.out.println("ConfirmCallback:     "+"原因："+cause);
+            System.out.println("ConfirmCallback:     "+"原因："+cause);*/
 
         });
 
